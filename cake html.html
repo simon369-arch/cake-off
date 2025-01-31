@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ultimate Dessert Showdown</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <script defer type="text/javascript" src="src/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Ultimate Dessert Showdown</h1>
+      <nav>
+        <ul id="cake-list">
+          <li>Chocolate Dream Delight</li>
+          <li>Berry Bliss Tower</li>
+          <li>Caramel Swirl Sensation</li>
+          <li>Golden Honey Drizzle</li>
+          <li>Velvet Raspberry Rush</li>
+          <li>Cookies & Cream Explosion</li>
+          <li>Mango Tango Fantasy</li>
+          <li>Lemon Zest Surprise</li>
+          <li>Hazelnut Heaven</li>
+          <li>Peanut Butter Perfection</li>
+        </ul>
+      </nav>  
+    </header>
+
+    <main>
+      <div class="cake-details">
+        <h2 id="cake-name">Cake Name Goes Here</h2>
+        <img
+          id="cake-image"
+          alt="Cake Name Goes Here"
+          src="assets/new-cake-placeholder.jpg"
+        />
+        <p>
+          <em id="cake-description">Indulge in the sweet, rich flavors of our delicious creations, baked to perfection with premium ingredients.</em>
+        </p>
+
+        <form id="description-form">
+          <label for="description">Edited Description:</label>
+          <textarea id="description"></textarea>
+          <button type="submit">Update Cake</button>
+        </form>
+
+        <h3>Customer Reviews</h3>
+        <ul id="review-list">
+          <li>"Absolutely divine! The flavors were perfectly balanced."</li>
+          <li>"Best cake I've ever had! Will order again."</li>
+        </ul>
+        <form id="review-form">
+          <label for="review">Your Review:</label>
+          <textarea id="review"></textarea>
+          <button type="submit">Add review</button>
+        </form>
+      </div>
+    </main>
+    <script>
+        fetch("http://localhost:3000")
+        .then(res => console.log(res))
+        .catch(error => console.log(error))
+    </script>
+  </body>
+</html>
